@@ -8,4 +8,7 @@
 ## Usage
 Clone the repository and run `bundle install` to install all gem dependencies.
 Run `ruby app.rb` and it should generate an html of exif data
+
 Open the generated html `open ./index.html`
+
+You can also specify a folder to get geotags `ruby app.rb ~/Downloads`
