@@ -1,6 +1,9 @@
 require 'bundler'
 Bundler.require
 
+require_relative("./image_data.rb")
+require_relative("./export_to_html.rb")
+
 class Runner
   attr_reader :files, :stdout, :env, :image_data
 
