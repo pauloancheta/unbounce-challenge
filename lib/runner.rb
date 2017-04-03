@@ -37,5 +37,4 @@ class Runner
   def read_exif(filename)
     image_data.new(filename: filename).call
   end
-
 end
