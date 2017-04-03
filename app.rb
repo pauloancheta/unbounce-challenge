@@ -7,7 +7,11 @@ class App
   def initialize(*args)
     if args.first.is_a? String
       directory = "#{args.first}/**/*.jpg"
-      Runner.new(files: Dir.glob(directory)).call
+
+      Runner.new(
+        files: Dir.glob(directory),
+        format: args.last
+      ).call
     else
       Runner.new(*args).call
     end
