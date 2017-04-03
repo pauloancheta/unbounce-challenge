@@ -1,4 +1,4 @@
-# Unbounce Exif Challenge
+# Unbounce A-Team Programming Challenge
 
 ## Gems Used
 - [Exif](https://github.com/tonytonyjan/exif)
