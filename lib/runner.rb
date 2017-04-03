@@ -7,7 +7,8 @@ class Runner
   def initialize(
     files: Dir.glob("gps_images/**/*.jpg"),
     stdout: $stdout,
-    env: "production")
+    env: "production",
+    image_data: ImageData)
     @files = files
     @stdout = stdout
     @env = env
@@ -26,6 +27,12 @@ class Runner
 
   private
   def export_files_to_html
-    "test"
+    rows = files.map { |filename| read_exif(filename) }
+    ExportToHtml.new(rows: rows).call
   end
+
+  def read_exif(filename)
+    image_data.new(filename: filename).call
+  end
+
 end
