@@ -9,13 +9,14 @@ class Runner
   attr_reader :files, :stdout, :env, :image_data, :format
 
   def initialize(
-    files: Dir.glob("gps_images/**/*.jpg"),
+    files: "gps_images",
     stdout: $stdout,
     env: "production",
     format: "csv",
     image_data: ImageData)
 
-    @files = files
+    directory = "#{files}/**/*.jpg"
+    @files = Dir.glob(directory)
     @stdout = stdout
     @env = env
     @image_data = image_data
