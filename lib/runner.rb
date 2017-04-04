@@ -6,24 +6,24 @@ require_relative("./image_data.rb")
 require_relative("./export_to_html.rb")
 
 class Runner
-  attr_reader :files, :stdout, :env, :image_data, :format
+  attr_reader :directory, :stdout, :env, :image_data, :format, :files
 
   def initialize(
-    files: "gps_images",
+    directory: "gps_images",
     stdout: $stdout,
     env: "production",
     format: "csv",
     image_data: ImageData)
 
-    directory = "#{files}/**/*.jpg"
-    @files = Dir.glob(directory)
+    @directory = "#{directory}/**/*.jpg"
     @stdout = stdout
     @env = env
     @image_data = image_data
     @format = format
   end
 
-  def call
+  def call(dir: Dir)
+    @files = dir.glob(@directory)
     if env != "test"
       write_file
     else

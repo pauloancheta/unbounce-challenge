@@ -22,7 +22,7 @@ class App
     args.each do |a|
       hash.merge! option_string_to_hash(a)
     end
-    p hash
+    hash
   end
 
   def option_string_to_hash(option_string)
