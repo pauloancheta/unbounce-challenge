@@ -11,4 +11,6 @@ Run `ruby app.rb` and it should generate an html of exif data
 
 Open the generated html `open ./index.html`
 
-You can also specify a folder to get geotags `ruby app.rb ~/Downloads`
+To have an html output, use the `--format` option which is used as: `ruby app.rb --format=html`. This defaults to `csv`
+
+To specify a directory, use the `--files` option which is a relative path from where the project is. This can be used as `ruby app.rb --files="../my_custom_directory"`
