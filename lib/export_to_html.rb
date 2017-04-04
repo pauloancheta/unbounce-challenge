@@ -44,7 +44,11 @@ class ExportToHtml
     rows.map do |row|
       """
 <tr>
-  <td>#{row.filename}</td>
+  <td>
+    <img src='#{row.filename}' style='height: 60px'>
+    <br>
+    #{row.filename}
+  </td>
   <td>#{row.latitude}</td>
   <td>#{row.longitude}</td>
 </tr>
