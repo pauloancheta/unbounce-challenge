@@ -13,4 +13,7 @@ Open the generated html `open ./index.html`
 
 To have an html output, use the `--format` option which is used as: `ruby app.rb --format=html`. This defaults to `csv`
 
-To specify a directory, use the `--files` option which is a relative path from where the project is. This can be used as `ruby app.rb --files="../my_custom_directory"`
+To specify a directory, use the `--directory` option which is a relative path from where the project is. This can be used as `ruby app.rb --directory="../my_custom_directory"`
+
+## Run Da Specs
+run the specs with `rspec`
